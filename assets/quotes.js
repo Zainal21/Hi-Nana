@@ -1,5 +1,5 @@
 // prettier-ignore
 export default [
-    { author: "zain", quotes: "Whatever happens, keep breathing" },
-    { author: "zain", quotes: "keep spirit in activities" },
+    { author: "Muhamad Zainal Arifin", quotes: "Whatever happens, keep breathing" },
+    { author: "Muhamad Zainal Arifin", quotes: "I love you." },
 ];

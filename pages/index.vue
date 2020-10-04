@@ -25,7 +25,7 @@
     />
 
     <!-- Audio file -->
-    <audio src="~/assets/music.ogg" autoplay controls loop />
+    <!-- <audio src="~/assets/music.mp3" autoplay controls loop /> -->
 
     <!-- Main -->
     <div class="main">
@@ -59,20 +59,11 @@
 import quotesFile from "~/assets/quotes.js";
 import variables from "~/assets/variables.js";
 
-// var date
-const date = new Date();
-
 // Define greetings
 const { greetings } = variables;
 
 // Get time
-const now = date.getHours();
-
-// Get date
-const day = date.getDate();
-
-//Get month
-const month = date.getMonth();
+const now = new Date().getHours();
 
 // Client-side rendering
 if (process.browser) {
@@ -125,25 +116,20 @@ export default {
       nicknames: this.random(variables.nicknames), // random the nicknames (from variables.js)
       quotes: this.random(quotesFile), // random the quotes (from variables.js)
       greetings: function() {
-        // anniversary 19 Sept
-        if (day == 19 && month == 8) return greetings.anniversary;
-        
-        else if(day == 19) return greetings.monthsary;
-        
         // If right now is equals to or greater than 18 (6pm), show evening greeting
-        else if (now >= 18) return greetings.evening;
+        if (now >= 18) return greetings.evening;
 
         // If right now is equals to or greater than 15 (3pm), show afternoon greeting
-        else if (now >= 15) return greetings.afternoon;
+        if (now >= 15) return greetings.afternoon;
 
         // If right now is equals to or greater than 11 (11am), show day greeting
-        else if (now >= 11) return greetings.day;
+        if (now >= 11) return greetings.day;
 
         // If right now is equals to or greater than 5 (5am), show morning greeting
-        else if (now >= 5) return greetings.morning;
+        if (now >= 5) return greetings.morning;
 
         // If right now is equals to or greater than 0 (12am), show sleep greeting
-        else if (now >= 0) return greetings.night;
+        if (now >= 0) return greetings.night;
       },
       darkMode: function() {
         // If right now is equals to or greater than 18 (6pm), turn on darkmode

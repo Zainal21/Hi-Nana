@@ -1,12 +1,10 @@
 export default {
-  nicknames: ["Riana", "Nana"],
+  nicknames: ["Riana", "Nana", "Riana Eka"],
   greetings: {
     evening: "Good Evening",
     afternoon: "Good Afternoon",
     day: "Good Day",
     morning: "Good Morning",
-    night: "Good Night",
-    // monthsary: "Happy Monthsary",
-    // anniversary: "Happy Anniversary"
+    night: "Good Night"
   }
 };
