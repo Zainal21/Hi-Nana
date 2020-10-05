@@ -1,6 +1,7 @@
 
 ## <u>Build Setup</u>
-1. Clone this project `git clone https://github.com/shidoitsuka/bucin.git`
+
+1. Clone this project `https://github.com/Zainal21/Hi-Nana`
 2. Edit `config.js` file
 3. Edit `variables.js` file inside `assets/` folder
 4. Open `config.js` and fill the host and port (if needed)
