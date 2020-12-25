@@ -1,10 +1,6 @@
 <template>
-  <!-- Background -->
+
   <div :class="darkMode() ? 'darkBG' : 'lightBG'">
-    <!--
-      Particles
-      Documentation : https://vue-particles.netlify.app/
-    -->
     <vue-particles
       class="particles"
       hoverMode="grab"
@@ -23,22 +19,13 @@
       :hoverEffect="true"
       :clickEffect="true"
     />
-
-    <!-- Audio file -->
-    <!-- <audio src="~/assets/music.mp3" autoplay controls loop /> -->
-
     <!-- Main -->
     <div class="main">
-      <!--
-        Typing characters (greeting & nickname)
-        Documentation : https://github.com/Orlandster/vue-typed-js/
-      -->
-      <!-- prettier-ignore -->
       <vue-typed-js
         class="vue-typed"
         :showCursor="false"
         :loop="true"
-        :strings="[greetings() + ', ' + nicknames + '! ^5000', 'I always wanted to tell you... ^2500', 'Nevermind! >///<']"
+        :strings="[greetings() + ', ' + nicknames + '! ^5000', 'I always wanted to tell you... ^2500', 'Nevermind! >///<', `I just wanna say something. I Love U. That's all`]"
         :backDelay="500"
         :typeSpeed="100"
         :backSpeed="20"
@@ -48,14 +35,13 @@
       </vue-typed-js>
 
       <!-- Quotes -->
-      <h2 class="quotes quotes-main">{{ quotes.quotes }}</h2>
-      <h3 class="quotes author">{{ quotes.author }}</h3>
+      <h1 class="quotes quotes-main"><strong>{{ quotes.quotes }}</strong></h1>
+      <h3 class="quotes author">Created ♥  <a href="https://github.com/Zainal21">Muhamad Zainal Arifin</a></h3>
     </div>
   </div>
 </template>
 
 <script>
-// Import quotes and variables
 import quotesFile from "~/assets/quotes.js";
 import variables from "~/assets/variables.js";
 
@@ -67,11 +53,6 @@ const now = new Date().getHours();
 
 // Client-side rendering
 if (process.browser) {
-  /*
-   * Function random polyfill
-   * Usage   : random(["this", "is", "an", "array"]);
-   * Output  : randomize array values
-   */
   function random(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }

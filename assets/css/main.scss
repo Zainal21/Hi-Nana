@@ -28,10 +28,17 @@ audio {
   z-index: 1;
 }
 .quotes-main {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Lilita One", cursive;
 }
 .author {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.author a{
+  text-decoration: none;
+  color: rgb(26, 25, 25) !important;
 }
 .popup {
   display: block;
