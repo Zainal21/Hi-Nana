@@ -1,5 +1,4 @@
 <template>
-
   <div :class="darkMode() ? 'darkBG' : 'lightBG'">
     <vue-particles
       class="particles"
@@ -36,7 +35,7 @@
 
       <!-- Quotes -->
       <h1 class="quotes quotes-main"><strong>{{ quotes.quotes }}</strong></h1>
-      <h5 class="quotes author">Created ♥  <a href="https://github.com/Zainal21">Muhamad Zainal Arifin</a></h5>
+      <p class="quotes author">Created ♥  <a href="https://github.com/Zainal21">Muhamad Zainal Arifin</a></p>
     </div>
   </div>
 </template>
@@ -46,14 +45,11 @@ import quotesFile from "~/assets/quotes.js";
 import variables from "~/assets/variables.js";
 
 const { greetings } = variables;
-
 const now = new Date().getHours();
-
 if (process.browser) {
   function random(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
-
   window.onNuxtReady(app => {
     document.addEventListener("click", function(ev) {
       const x = ev.clientX;
@@ -70,7 +66,6 @@ if (process.browser) {
     });
   });
 }
-
 export default {
   transition: "slide-x-transition",
   data() {
